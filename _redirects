@@ -1,0 +1,5 @@
+/auth /app/auth.html 302
+/network /app/network.html 302
+/taskmanager /app/taskmanager.html 302
+/projectmanager /app/projectmanager.html 302
+/home / 302

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspace</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://kit.fontawesome.com/772cd4748b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="projectmanager.css">
+
+</head>
+<body>
+
+    <main class="main theme">
+
+        
+        
+
+
+        <aside class="group-aside theme">
+            <div class="group-options">
+                <div class="group-box">
+                    <button class="group-button group-option-button fa fa-users theme" id="joinGroup" title="Join group"></button>
+                    <div class="group-label theme">
+                        <p class="group-label-p">Join group</p>
+                    </div>
+                </div>
+                
+                <div class="group-box">
+                    <button class="group-button group-option-button fa fa-plus theme" id="createGroup" title="Create group"></button>
+                    <div class="group-label theme">
+                        <p class="group-label-p">Create group</p>
+                    </div>
+                </div>
+                </div>
+            <div class="group-boxes">
+            </div>
+        </aside>
+
+        <aside class="aside theme">
+            <section id="top-aside-section" class="top-aside-section theme">
+                <p class="top-projects-l">Lists</p>
+                <div id="top-icons" class="top-icons">
+                    <span class="top-icon refresh fa fa-refresh theme" title="Refresh" id="refresh"></span><span class="top-icon search fas fa-search theme" title="Search" id="search"></span><span class="top-icon newfile fas fa-plus theme" title="Add list" id="lists-plus"></span><span class="top-icon newfile fas fa-ellipsis-v theme" title="Options" id="lists-options"></span>
+                </div>
+                <section class="popupMenu hide">
+                    
+                </section>
+            </section>
+
+            <section class="lists-aside-section">
+            </section>
+        </aside>
+
+
+
+        
+        <article class="main-article">
+            <section class="top-section theme">
+                <button class="date-back date-btns fas fa-angle-left disabled theme" title="Date Backward" aria-hidden="false" id="backward"></button>
+                <section class="calendar-lists" id="calendar-lists">
+                    
+                </section>
+                <button class="date-next date-btns fas fa-angle-right disabled theme" title="Date Forward" aria-hidden="false"  id="forward"></button>
+            </section>
+            <section class="main-section theme">
+                <div class="info-elements-list theme">
+                    <p class="list-name" id="list-name"></p>
+                    <input type="text" class="list-input hide" maxlength="50">
+                    <div class="action-btns-box">
+                        <span class="action-btn fa fa-paste theme" title="Paste" id="paste" style="display:flex;"></span><span class="action-btn fa fa-pen theme" title="Edit list name" id="edit" style="display:flex;"></span><span class="action-btn fa fa-plus theme" title="Add task" id="plus" style="display:flex;"></span><span class="action-btn fa fa-save theme" title="Save" id="save" style="display:flex;"></span>
+                    </div>
+                </div>
+                <ul class="elements-list theme" id="elements-list">
+                    
+                </ul>
+            </section>
+        </article>
+        <aside class="settings-aside theme">
+            <div class="option-btns-box">
+                <div class="option-btn-box">
+                    <button class="option-btn links static-link theme" id="link-home" data-id="home"><span class="fa fa-home option-icon"></span></button>
+                    <div class="option-label theme">
+                        <p class="option-label-p">Home</p>
+                    </div>
+                </div>
+                <div class="option-btn-box">
+                    <button class="option-btn links static-link theme" id="link-dashboard" data-id="network"><span class="fa fa-share-alt option-icon"></span></button>
+                    <div class="option-label theme">
+                        <p class="option-label-p">Network Board</p>
+                    </div>
+                </div>
+                <div class="option-btn-box">
+                    <button class="option-btn links static-link theme" id="link-taskmanager" data-id="taskmanager"><span class="fa fa-check-square option-icon"></span></button>
+                    <div class="option-label theme">
+                        <p class="option-label-p">Task Manager</p>
+                    </div>
+                </div>
+                <div class="option-btn-box">
+                    <button class="option-btn links theme" id="link-auth" data-id="login"><span class="fas fa-sign-in-alt option-icon"></span></button>
+                    <div class="option-label theme">
+                        <p class="option-label-p">Login</p>
+                    </div>
+                    <div class="option-label hide theme">
+                        <p class="option-label-p">Logout</p>
+                    </div>
+                </div>
+            </div>
+            <div class="option-btns-box">
+                <div class="option-btn-box">
+                    <button class="option-btn lang-btn theme" href="http://127.0.0.1:5500/dashboard.html" id="lang-btn"><span class="fas fa-language option-icon"></span></button>
+                    <div class="option-label theme">
+                        <p class="option-label-p">Language</p>
+                    </div>
+                </div>
+                <div class="option-btn-box">
+                    <button class="option-btn theme-btn theme" id="theme-btn"><span class="fas fa-moon option-icon"></span></button>
+                    <div class="option-label theme">
+                        <p class="option-label-p">Theme</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </aside>
+
+        <article class="join-background hide">
+            <div class="join-dialog">
+                <div class="join-top">
+                    <label for="" class="join-top-label">Join group</label>
+                </div>
+                <div class="join-p-box">
+                    <p class="join-p">Unete a un grupo y descubre las oportunidades que ofrece trabajar en equipo.</p>
+                    <p class="join-p">Puedes unirte a un grupo introduciendo el codigo de grupo abajo o si lo prefieres ir al a direccion productivity.com/groups/*codigo del grupo*</p>
+                </div>
+                <label for="" class="join-label">Group Code</label>
+                <input type="text" name="" id="" class="join-input">
+                <div class="join-button-box">
+                    <button class="join-button" data-id="back">Back</button>
+                    <button class="join-button join-btn" data-id="join">Join group</button>
+                </div>
+                
+            </div>
+        </article>
+
+
+        
+        <article class="create-background hide">
+            <div class="create-dialog">
+                <div class="create-top">
+                    <label for="" class="create-top-label">Create group</label>
+                </div>
+                <div class="create-p-box">
+                    <p class="create-p">Crea un grupo y comparte las oportunidades que ofrece trabajar en equipo.La imagen debe de ser menor a 5MB.</p>
+                </div>
+                <div class="uploadImage-box">
+                    <div class="uploadImage uploadImage-Box">
+                        <span class="uploadImage-icon fa fa-cloud-upload"></span>
+                    </div>
+                    <input type="file" id="file" accept=".jpg, .jpeg, .png" class="uploadInput">
+                    <label for="file" class="uploadLabel">Upload Image</label>
+                </div>
+                <label for="" class="create-label">Group Name</label>
+                <input type="text" name="Group name" id="group-name-input" class="create-input">
+                <div class="create-button-box">
+                    <button class="create-button" data-id="back">Back</button>
+                    <button class="create-button create-btn red" data-id="create">Create group</button>
+                </div>
+                
+            </div>
+        </article>
+
+        <article class="dialog-background hide">
+            <div class="dialog">
+            </div>
+        </article>
+
+    </main>
+
+    <section class="error-log-section">
+        <div class="error-log-message">
+        </div>
+   </section>
+
+
+    
+    <script src="projectmanager.js" type="module"></script>
+</body>
+</html>

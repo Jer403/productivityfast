@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Board</title>
+    <script src="https://kit.fontawesome.com/772cd4748b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <article id="background" class="background">
+        <aside id="main-article" class="main-article color4" style="display: nones;">
+            <section id="top-section" class="top-section">
+                <p class="top-projects-p lang" en="Projects" es="Proyectos">Projects</p>
+                <div id="top-icons" class="top-icons">
+                    </span><span class="top-icon refresh fa fa-refresh" title="Refresh"></span><span class="top-icon search fas fa-search" title="Search"></span><span class="top-icon newfile fas fa-plus" title="Add project"></span>
+                </div>
+                
+            </section>
+            <section id="tools-section" class="tools-section">
+                <div class="tools-box">
+                    <div class="node-box">
+                        <button class="tool-button node-type-button actual-tool fa fa-square-o" title="Node form" data-id="1"></button>
+                        <div class="tool-type-box node-type-box">
+                            <button class="node-type tool-type-button actual-tool" title="Square node" data-id="1" data-type="square"><span class="fa fa-square-o"></span></button>
+                            <button class="node-type tool-type-button" title="Circle node" data-id="2" data-type="circle"><span class="fa fa-circle-o"></span></button>
+                        </div>
+                        
+                    </div>
+                    <button class="tool-button fas fa-trash-alt" title="Delete tool" data-id="2"></button>
+                    <button class="tool-button fas fa-check" title="Check node" data-id="3"></button>
+                    <div class="link-box">
+                        <button class="tool-button link-type-button fas fa-link" title="Link type" data-id="4"></button>
+                        <div class="tool-type-box">
+                            <button class="fa fa-slash link-type tool-type-button actual-tool lineType" title="Line link" data-id="1" data-type=""></button>
+                            <button class="link-type tool-type-button" title="Arrow link" data-id="2" data-type="arrow"><span class="fa fa-long-arrow-right long-arrow"></span></button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="tools-box independient-tools">
+                    <button class="tool-button move-speed-button-switch lang" title="Movement speed" en="Speed" es="Veloc." data-id="10">Speed</button> 
+                    <div class="move-speed-button-box">
+                        <button class="move-speed-button actual-tool" data-id="1">x1</button>
+                        <button class="move-speed-button" data-id="2">x2</button>
+                        <button class="move-speed-button" data-id="4">x4</button>
+                        <button class="move-speed-button" data-id="8">x8</button>
+                    </div>
+                    <button class="tool-button save-button fas fa-save" title="Save" data-id="5"></button>
+                </div>
+            </section>
+            <section id="main-section" class="main-section">
+                <span class="loading fa fa-circle-o-notch"></span>
+    
+            </section>
+            
+        </aside>
+
+        <article id="surface" class="surface">
+        </article>
+
+        <svg width="7678" height="3962" id="lines-surface">
+            <defs>
+                <marker id="arrow" markerWidth="10" markerHeight="10" refX="32" refY="3" 
+                  orient="auto" markerUnits="strokeWidth">
+                  <path d="M0,0 L2,3 0,6 9,3" fill="#000" />
+                </marker>
+           </defs>
+        </svg>
+
+        
+        
+        <article class="modal-background">
+        </article>
+    </article>
+    <section class="settings-section">
+        <button class="profile-button fa fa-gear" ></button>
+        <div class="profile-background hideDisplay">
+            <div class="profile-box">
+                <section class="profile-top-section">
+                    
+                </section>
+                <section class="profile-mid-section">
+                    <a href="https://productivityfast.pages.dev/home" en="Home" es="Inicio" class="profile-mid-button lang">Home</a>
+                    <a href="https://productivityfast.pages.dev/taskmanager" en="Task Manager" es="Gestor de tareas" class="profile-mid-button lang">Task Manager</a>
+                    <a href="https://productivityfast.pages.dev/projectmanager" en="WorkSpace" es="Espacio de trabajo" class="profile-mid-button lang">WorkSpace</a>
+                    <a href="https://productivityfast.pages.dev/auth?from=dashboard" en="Login" es="Iniciar Sesion" enl="Logout" esl="Cerrar Sesion" class="profile-mid-button lang" id="linkAuth" data-id="login">Login</a>
+                </section>
+                
+                <section class="profile-bottom-section">
+                    <button class="profile-bottom-button lang-btn fa fa-language" title="Language"></button>
+                    <button class="profile-bottom-button theme-btn" title="Theme"></span><span class="fa fa-moon"></span></button>
+                </section>
+                <button class="switch-aside"></button>
+            </div>
+        </div>
+    </section>
+    <section class="error-log-section">
+        <div class="error-log-message">
+        </div>
+   </section>
+    <script src="dashboard.js"> </script>
+</body>
+</html>

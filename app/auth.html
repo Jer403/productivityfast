@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia Sesion o Cree una cuenta</title>
+    <link rel="stylesheet" href="auth.css">
+    <meta description="Inicie sesion o cree una cuenta en nuestra plataforma de organizacion personal">
+</head>
+<body>
+    <article id="background" class="background">
+        <div class="blur"></div>
+    </article>
+
+    <!-- Main article -->
+    <article id="main" class="main">
+        <!-- Vertical section -->
+        <section id="v-section" class="v-section">
+
+            <!-- Main Section -->
+            <section id="section" class="section">
+                <!-- Log Section -->
+                <section id="log-section" class="log-section ">
+                    <section id="log-case" class="log-case section disappear">
+                        <h1 class="log-message">Ponga su contraseña</h1>
+                    </section>
+                </section>
+
+                <!-- Login switch btn -->                                                                         <!-- Register switch btn -->
+                <button id="login-switch-btn" class="login-btn switch-btn lang actual" data-id="login" es="Iniciar Sesión">Log in</button><button id="register-switch-btn" class="register-btn switch-btn lang" data-id="register" es="Crear Cuenta">Create account</button>
+                
+                <!-- Boxes section -->
+                <section id="box-section" class="box-section">
+                    
+                    <!-- Logo -->
+                    <label id="mid-box_logo" class="mid-box_logo mid-element" > Awesome board</label>
+                    
+                    <!-- Login Box -->
+                    <form id="login-box" class="box">
+                        <!-- Text title -->
+                        <label id="mid-box_title" class="mid-box_title mid-element lang" es="Iniciar Sesión">Log in</label>
+                        <!-- Name input -->
+                        <input type="text" id="mid-box_name-input-login" class="mid-box_input mid-element lang-i" es="Introduce su nombre" placeholder="Enter your name" maxlength="16">
+                        </input>
+                        <!-- Password input -->
+                        <input type="password" id="mid-box_password-input-login" class="mid-box_input mid-element lang-i" es="Introduce su contraseña" placeholder="Enter your password">
+                        </input>
+                    </form>
+                    
+                    <!-- Register Box -->
+                    <form id="register-box" class="box hide" >
+                        <!-- Text title -->
+                        <label id="mid-box_title" class="mid-box_title mid-element lang" es="Crear Cuenta">Create account</label>
+                        <!-- Name input -->
+                        <input type="text" name="Name" id="mid-box_name-input-register" class="mid-box_input mid-element lang-i" es="Introduce su nombre" placeholder="Enter your name">
+                        </input>
+                        <!-- Password input -->
+                        <input type="password" id="mid-box_password-input-register" class="mid-box_input mid-element lang-i" es="Introduce su contraseña" placeholder="Enter your password">
+                        </input>
+                        <!-- Password input -->
+                        <input type="password" id="mid-box_password2-input-register" class="mid-box_input mid-element lang-i" es="Repita su contraseña" placeholder="Repeat your password">
+                        </input>
+                        <!-- Email input -->
+                        <input type="email" id="mid-box_email-input-register" class="mid-box_input mid-element lang-i" es="Introduce su email" placeholder="Enter your email">
+                        </input>
+                    </form>
+
+                    <div class="checkbox-box">
+                        <input type="checkbox" name="" id="keep" class="keep">
+                        <label for="" class="keep-label lang" es="Mantenerme conectado">Keep me connected</label>
+                    </div>
+                    
+
+                    <!-- Back-Next btn box-->
+                    <section id="back-next-box" class="back-next-box">
+                        <!-- Back btn -->
+                        <button id="back-btn" class="back-btn back-next-btn lang" es="Atras">Back
+                        </button>
+                        <!-- Next btn -->
+                        <button id="next-btn" class="next-btn back-next-btn lang" es="Entrar" data-id="login">Login
+                        </button>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </article>
+    <script src="auth.js"></script>
+</body>
+</html>

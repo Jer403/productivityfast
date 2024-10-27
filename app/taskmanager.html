@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <script src="https://kit.fontawesome.com/772cd4748b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="todo.css">
+
+</head>
+<body>
+
+    <main class="main">
+        <aside class="aside">
+            <section id="top-aside-section" class="top-aside-section">
+                <p class="top-projects-l lang" en="Lists" es="Listas">Lists</p>
+                <div id="top-icons" class="top-icons">
+                    <span class="top-icon refresh fa fa-refresh" title="Refresh" id="refresh"></span><span class="top-icon search fas fa-search" title="Search" id="search"></span><span class="top-icon newfile fas fa-plus" title="Add list" id="lists-plus"></span>
+                </div>
+            </section>
+
+            <section class="lists-aside-section">
+            </section>
+
+
+            
+            
+        </aside>
+        
+        <article class="main-article">
+            <section class="top-section">
+                <button class="date-back date-btns fas fa-angle-left" id="backward" title="Date button backward"></button>
+                <section class="calendar-lists" id="calendar-lists">
+                    
+                </section>
+                <button class="date-next date-btns fas fa-angle-right" id="forward" title="Date button forward"></button>
+            </section>
+            <section class="main-section">
+                <div class="info-elements-list">
+                    <p class="list-name" id="list-name"></p>
+                    <input type="text" class="list-input hide" maxlength="50">
+                    <div class="action-btns-box">
+                        <span class="fa fa-paste action-btn" title="Paste" id="paste" style="display:flex;"></span><span class="fa fa-pen action-btn" title="Edit list name" id="edit" style="display:flex;"></span><span class="fa fa-plus action-btn" title="Add task" id="plus" style="display:flex;"></span><span class="fa fa-save action-btn" title="Save" id="save" style="display:flex;"></span>
+                    </div>
+                </div>
+                <ul class="elements-list" id="elements-list">
+                    
+                </ul>
+            </section>
+        </article>
+        <aside class="settings-aside">
+            <div class="option-btns-box">
+                <div class="option-btn-box">
+                    <button class="option-btn links static-link" id="link-home" data-id="home" title="Home"><span class="fa fa-home option-icon"></span></button>
+                    <div class="option-label">
+                        <p class="option-label-p lang" en="Home" es="Inicio">Home</p>
+                    </div>
+                </div>
+                <div class="option-btn-box">
+                    <button class="option-btn links static-link" id="link-dashboard" data-id="network" title="Network"><span class="fa fa-share-alt option-icon"></span></button>
+                    <div class="option-label">
+                        <p class="option-label-p lang" en="Network Board" es="Tablero de red">Network Board</p>
+                    </div>
+                </div>
+                <div class="option-btn-box">
+                    <button class="option-btn links static-link" id="link-projectmanager" data-id="projectmanager" title="Project manager"><span class="fa fa-users option-icon"></span></button>
+                    <div class="option-label">
+                        <p class="option-label-p lang" en="WorkSpace" es="Espacio de trabajo">WorkSpace</p>
+                    </div>
+                </div>
+                <div class="option-btn-box">
+                    <button class="option-btn links" id="link-auth" data-id="login" title="Authentication"><span class="fas fa-sign-in-alt option-icon"></span></button>
+                    <div class="option-label">
+                        <p class="option-label-p lang" en="Login" es="Iniciar Sesión">Login</p>
+                    </div>
+                    <div class="option-label hide">
+                        <p class="option-label-p lang" en="Logout" es="Cerrar Sesión">Logout</p>
+                    </div>
+                </div>
+            </div>
+            <div class="option-btns-box">
+                <div class="option-btn-box">
+                    <button class="option-btn lang-btn" id="lang-btn"><span class="fas fa-language option-icon"></span></button>
+                    <div class="option-label">
+                        <p class="option-label-p lang" en="Language" es="Lenguaje">Language</p>
+                    </div>
+                </div>
+                <div class="option-btn-box">
+                    <button class="option-btn theme-btn" id="theme-btn"><span class="fas fa-moon option-icon"></span></button>
+                    <div class="option-label">
+                        <p class="option-label-p lang" en="Theme" es="Tema">Theme</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </aside>
+    </main>
+    <section class="error-log-section">
+        <div class="error-log-message">
+        </div>
+   </section>
+    <script src="todo.js"></script>
+</body>
+</html>
