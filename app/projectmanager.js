@@ -1892,9 +1892,7 @@ async function loadGroupFromUsers(token) {   //Gets all the projects ids
 
 		return groups;
 	} catch (e) {
-
 		showErrors(e.error)
-
 	}
 }
 
